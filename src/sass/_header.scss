@@ -1,0 +1,48 @@
+.header{
+    padding: 0px 18px 0px 28px;
+    display: flex;
+    align-items: center;
+    &__logo{
+        display: inline-block;
+        margin-right: 25px;
+    }
+    &__search{
+        display: inline-block;
+    }
+    &__settings{
+        display: inline-block;
+    }
+}
+.logo__text{
+    color: #000102;
+    font-family: $font-roboto;
+    font-size: 37px;
+    font-weight: 400;
+}
+.search{
+    &__text{
+        font-family: $font-roboto;
+        color: #2d3235;
+        font-size: 12px;
+        border: 1px solid #dcdee0;
+        padding: 8px 13px;
+        width: 410px;
+    }
+    &__submit{
+        border: 1px solid #dcdee0;
+        cursor: pointer;
+        vertical-align: middle;
+        padding: 7px 8px;
+        margin-left: -5px;
+    }
+}
+.settings{
+    &__text{
+        text-decoration: none;
+        color: $title-color;
+        font-family: $font-roboto;
+        font-size: 12px;
+        font-weight: 600;
+        vertical-align: text-top;
+    }
+}
