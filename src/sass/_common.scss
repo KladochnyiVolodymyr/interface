@@ -1,5 +1,14 @@
 .container{
     width: 1229px;
     margin: 0 auto;
+    @include r(1200){
+		width: 970px;
+	}
+	@include r(993){
+		width: 750px;
+	}
+	@include r(769){
+		width: 100%;
+	}
 }
 

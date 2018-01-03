@@ -1,0 +1,25 @@
+.navigation__menu{
+    border: 1px solid $border-color;
+}
+.menu{
+    &__item{
+        display: inline-block;
+        margin-right: -4px;
+    }
+    &__text{
+        color: #2d3235;
+        font-family: $font-roboto;
+        font-size: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 16px 25px;
+        display: inline-block;
+    }
+}
+.is-active .menu__text{
+    color: #fff;
+    padding: 16px 40px 16px 47px;
+}
+.is-active{
+    background-color: #383e42;
+}
