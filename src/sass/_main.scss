@@ -5,10 +5,18 @@
         flex: 1;
         padding: 25px;
     }
+    &__col_center{
+        border-right: 1px solid $border-color;
+        border-left: 1px solid $border-color;
+    }
+}
+.info{
+    &__title{
+        margin-bottom: 35px;
+    }
 }
 .title{
     position: relative;
-    margin-bottom: 35px;
     &__text{
         color: #373d41;
         font-family: $font-roboto;
@@ -40,6 +48,10 @@
         font-family: $font-roboto;
         font-size: 17px;
         margin-bottom: 13px;
+        font-weight: 400;
+        &:hover{
+            color: #68309d;
+        }
     }
     &__text{
         color: #5b646c;
