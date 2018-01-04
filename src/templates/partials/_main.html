@@ -1,0 +1,44 @@
+{% import "../data/data.html" as list %}
+<div class="main">
+    <div class="main__col">
+        <div class="info">
+            <div class="title">
+                <h2 class="title__text">Collections</h2>
+                <div class="title__description">Top level collections</div>
+                <div class="title__icon">
+                    {{mixins.icon('layers')}}
+                </div>
+            </div>
+            <div class="content">
+                <ul class="content__list">
+                    {% for item in list.content_col1 %}
+                        <li class="content__item">
+                            <a class="content__link" href="#">
+                                <h3 class="content__title">{{item.link}}</h3>
+                                <span class="content__text">{{item.text}}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="info__btn">
+                <div class="button">
+                    <a class="button__text" href="#">See More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main__col">
+        <div class="info">
+            <div class="title">
+                <h2 class="title__text">Other links</h2>
+                <div class="title__description">Links to other content</div>
+                <div class="title__icon">
+                    {{mixins.icon('link')}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main__col">
+    </div>
+</div>

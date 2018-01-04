@@ -1,0 +1,54 @@
+.main{
+    display: flex;
+    width: 100%;
+    &__col{
+        flex: 1;
+        padding: 25px;
+    }
+}
+.title{
+    position: relative;
+    margin-bottom: 35px;
+    &__text{
+        color: #373d41;
+        font-family: $font-roboto;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    &__description{
+        color: #5b656b;
+        font-family: $font-roboto;
+        font-size: 13px;
+    }
+    &__icon{
+        position: absolute;
+        right: 0px;
+        top:0px;
+        .icon{
+            width: 32px;
+            height: 32px;
+            fill: #99a1a7;
+        }
+    }
+}
+.content{
+    &__link{
+        text-decoration: none;
+    }
+    &__title{
+        color: $title-color;
+        font-family: $font-roboto;
+        font-size: 17px;
+        margin-bottom: 13px;
+    }
+    &__text{
+        color: #5b646c;
+        font-family: $font-roboto;
+        font-size: 12px;
+        display: inline-block;
+        width: 80%;
+    }
+    &__item{
+        margin-bottom: 30px;
+    }
+}
