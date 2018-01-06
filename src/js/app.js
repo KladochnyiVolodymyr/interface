@@ -7,7 +7,7 @@ document.getElementById('responsive-menu').addEventListener('click', menuFunctio
 
 import 'lightslider';
 
-$('#light-slider').lightSlider({
+$('.twitter__slider').lightSlider({
   item: 1,
-  loop:true
+  pager: false
 });

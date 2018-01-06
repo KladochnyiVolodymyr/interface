@@ -12,10 +12,22 @@
     }
 }
 .menu{
+    @include r($screen-md){
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        background: #fff;
+        border-bottom: 1px solid $border-color;
+    }
     @include clearfix;
     &__item{
         display: inline-block;
         margin-right: -4px;
+        @include r($screen-md){
+            display: block;
+            margin-right: 0px;
+        }
     }
     &__text{
         color: #2d3235;
@@ -35,9 +47,15 @@
         &:hover .icon{
             fill: #fff;
         }
+        @include r($screen-md){
+            display: block;
+        }
     }
     &__icon{
         display: inline-block;
+        @include r($screen-md){
+            display: inline-block;
+        }
     }
 }
 .is-active .menu__text{
@@ -50,6 +68,9 @@
 .background-jobs{
     float: right;
     margin-right: 0px;
+    @include r($screen-md){
+        float: none;
+    }
     &__counter{
         width: 16px;
         height: 13px;
@@ -82,7 +103,7 @@
 			position: absolute;
 			height: 5px;
 			width: 100%;
-			background: #e75f3b;
+			background: #383e42;
 			border-radius: 9px;
 			opacity: 1;
 			left: 0;

@@ -3,6 +3,7 @@
     width: 100%;
     &__col{
         flex: 1;
+        min-width: 0;
     }
     &__col_center{
         border-right: 1px solid $border-color;
@@ -91,4 +92,47 @@
 }
 .twitter{
     background: #edeff1;
+    padding: 20px 17px 20px 25px;
+}
+.slide__header{
+    @include clearfix;
+}
+.author{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 3px;
+    margin-left: 13px;
+    &__name{
+        color: #373d41;
+        font-family: $font-roboto;
+        font-size: 18px;
+    }
+    &__link{
+        color: #0a4f8b;
+        font-family: $font-roboto;
+        font-size: 13px;
+        text-decoration: none;
+    }
+}
+.slide{
+    &__icon{
+        vertical-align: top;
+        margin-top: 10px;
+        float: right;
+        .icon-chat{
+            width: 32px;
+            height: 28px;
+            fill: #959da3;
+        }
+    }
+    &__content{
+        p{
+            color: #5f676f;
+            font-family: $font-roboto;
+            font-size: 16px;
+            width: 75%;
+            margin-top: 35px;
+            margin-left: 5px;
+        }
+    }
 }
