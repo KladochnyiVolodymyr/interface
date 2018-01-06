@@ -66,6 +66,7 @@
     "lodash": "^4.3.0"
   },
   "dependencies": {
+    "lightslider": "^1.1.6",
     "slick-carousel": "^1.8.1"
   }
 }

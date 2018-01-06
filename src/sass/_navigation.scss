@@ -1,3 +1,4 @@
+@import "./_mixin.scss";
 .navigation{
     border: 1px solid $border-color;
     &__menu{
@@ -28,6 +29,12 @@
             color: #fff;
             background-color: #383e42;
         }
+        @include r($screen-lg){
+            padding: 16px 13px;
+        }
+        &:hover .icon{
+            fill: #fff;
+        }
     }
     &__icon{
         display: inline-block;
@@ -42,6 +49,7 @@
 }
 .background-jobs{
     float: right;
+    margin-right: 0px;
     &__counter{
         width: 16px;
         height: 13px;
@@ -53,5 +61,67 @@
         border-radius: 8px;
         margin-left: 15px;
         vertical-align: text-top;
+    }
+}
+
+.responsive-menu{
+	width: 35px;
+	height: 35px;
+	position: relative;
+	cursor: pointer;
+	@include r($screen-md){
+		display: inline-block;
+	  	position: absolute;
+	  	top: 24px;
+	  	right: 35px;
+	}
+	@include transform (rotate(0deg));
+	@include transition (.5s ease-in-out);
+		span{
+			display: block;
+			position: absolute;
+			height: 5px;
+			width: 100%;
+			background: #e75f3b;
+			border-radius: 9px;
+			opacity: 1;
+			left: 0;
+			@include transform (rotate(0deg));
+			@include transition(.25s ease-in-out);
+		}
+		span:nth-child(1){
+			top: 0px;
+		}
+		span:nth-child(2){
+			top: 13px;
+		}
+		span:nth-child(3){
+			top: 13px;
+		}
+		span:nth-child(4){
+			top: 26px;
+		}
+}
+.responsive-menu.open {
+	span:nth-child(1) {
+  		top: 18px;
+  		width: 0%;
+  		left: 50%;
+	}
+	span:nth-child(2){
+		@include transform(rotate(45deg));
+	}
+	span:nth-child(3){
+		@include transform(rotate(-45deg));
+	}
+	span:nth-child(4){
+		top: 18px;
+  		width: 0%;
+  		left: 50%;
+	}
+}
+.responsive{
+    @include r($screen-md){
+    	display: block;
     }
 }
