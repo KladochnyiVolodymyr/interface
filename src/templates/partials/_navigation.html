@@ -7,12 +7,18 @@
             </li>
             {% for item in list.menu %}
                 <li class="menu__item">
-                    <a class="menu__text" href="#"><img src="{{item.icon}}">{{item.page}}</a>
+                    <a class="menu__text" href="#">{{mixins.icon('{{item.icon}}')}} {{item.page}}</a>
                 </li>
             {% endfor %}
         </ul>
     </div>
-    <div class="">
-
+    <div class="background-jobs">
+        <a class="background-jobs__link" href="#">
+            <div class="background-jobs__icon">
+                {{mixins.icon('bg-jobs')}}
+            </div>
+            <span>Background jobs</span>
+            <span class="background-jobs__counter">8</span>
+        </a>
     </div>
 </div>

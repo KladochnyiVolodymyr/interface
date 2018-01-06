@@ -1,5 +1,13 @@
-.navigation__menu{
+.navigation{
     border: 1px solid $border-color;
+    &__menu{
+        display: inline-block;
+    }
+    .icon{
+        height: 15px;
+        width: 15px;
+        fill: #53595e;
+    }
 }
 .menu{
     &__item{
@@ -22,4 +30,23 @@
 }
 .is-active{
     background-color: #383e42;
+}
+.background-jobs{
+    display: inline-block;
+    &__link{
+        text-decoration: none;
+    }
+    &__icon{
+        display: inline-block;
+    }
+    &__counter{
+        width: 16px;
+        height: 13px;
+        color: #fff;
+        background-color: #ff5f4b;
+        font-size: 10px;
+        font-family: $font-roboto;
+        padding: 1px 6px;
+        border-radius: 8px;
+    }
 }

@@ -2,29 +2,34 @@
     padding: 12px 18px 12px 25px;
     display: flex;
     align-items: center;
-    @include r(1200){
+    justify-content: space-between;
+    @include r($screen-md){
         display: block;
+        text-align: center;
     }
     &__logo{
-        margin-right: 25px;
-        @include r(1200){
-            display: inline-block;
-            margin-right: 0px;
+        @include r($screen-md){
+            margin-bottom: 15px;
         }
     }
     &__search{
-        margin-right: 16px;
-        @include r(1200){
-            display: inline-block;
-            margin-right: 0px;
-            margin-top: 8px;
+        @include r($screen-md){
+            margin-bottom: 15px;
         }
     }
-    &__button{
-        margin-bottom: 6px;
+    .user{
+        display: flex;
+        align-items: center;
+        @include r($screen-md){
+            justify-content: center;
+        }
     }
-    &__user{
-        margin-right: 24px;
+    .search{
+        display: flex;
+        align-items: center;
+        @include r($screen-md){
+            justify-content: center;
+        }
     }
 }
 .logo__text{
@@ -33,6 +38,12 @@
     font-size: 37px;
     font-weight: 400;
     text-decoration: none;
+    @include r($screen-lg){
+        font-size: 27px;
+    }
+    @include r($screen-md){
+        font-size: 37px;
+    }
 }
 .search{
     &__text{
@@ -42,17 +53,21 @@
         border: 1px solid $border-color;
         padding: 8px 13px;
         width: 410px;
+        @include r($screen-lg){
+            width: 280px;
+        }
     }
     &__submit{
         border: 1px solid $border-color;
         cursor: pointer;
         vertical-align: middle;
         padding: 7px 8px;
-        margin-left: -5px;
+        margin-left: -1px;
     }
 }
 .settings{
     display: inline-block;
+    margin-left: 16px;
     &__text{
         color: $title-color;
         font-family: $font-roboto;
@@ -83,6 +98,10 @@
         font-family: $font-roboto;
         font-size: 12px;
         vertical-align: text-top;
+        margin: 0px 13px;
+        @include r($screen-xl){
+            display: none;
+        }
     }
     &__icon{
         display: inline-block;
