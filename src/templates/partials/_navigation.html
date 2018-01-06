@@ -1,24 +1,50 @@
-{% import "../data/data.html" as list %}
 <div class="navigation">
-    <div class="navigation__menu">
-        <ul class="menu">
-            <li class="menu__item is-active">
-                <a class="menu__text" href="#">Home</a>
-            </li>
-            {% for item in list.menu %}
-                <li class="menu__item">
-                    <a class="menu__text" href="#">{{item.page}}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-    <div class="background-jobs">
-        <a class="background-jobs__link" href="#">
-            <div class="background-jobs__icon">
-                {{mixins.icon('bg-jobs')}}
-            </div>
-            <span>Background jobs</span>
-            <span class="background-jobs__counter">8</span>
-        </a>
-    </div>
+    <ul class="menu">
+        <li class="menu__item is-active">
+            <a class="menu__text" href="#">
+                <span>Home</span>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__text" href="#">
+                <div class="menu__icon">
+                    {{mixins.icon('home')}}
+                </div>
+                <span>My docushare</span>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__text" href="#">
+                <div class="menu__icon">
+                    {{mixins.icon('tasks')}}
+                </div>
+                <span>My tasks</span>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__text" href="#">
+                <div class="menu__icon">
+                    {{mixins.icon('favorites')}}
+                </div>
+                <span>My favorites</span>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__text" href="#">
+                <div class="menu__icon">
+                    {{mixins.icon('list')}}
+                </div>
+                <span>Resent</span>
+            </a>
+        </li>
+        <li class="menu__item background-jobs">
+            <a class="menu__text" href="#">
+                <div class="menu__icon">
+                    {{mixins.icon('bg-jobs')}}
+                </div>
+                <span>Background jobs</span>
+                <span class="background-jobs__counter">8</span>
+            </a>
+        </li>
+    </ul>
 </div>

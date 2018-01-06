@@ -1,3 +1,4 @@
-import sayHello from './lib/sayHello.js';
+import 'slick';
 
-sayHello();
+$('.twitter__slider').slick();
+

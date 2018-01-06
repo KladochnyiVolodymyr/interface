@@ -7,9 +7,11 @@
         height: 15px;
         width: 15px;
         fill: #53595e;
+        vertical-align: bottom;
     }
 }
 .menu{
+    @include clearfix;
     &__item{
         display: inline-block;
         margin-right: -4px;
@@ -22,23 +24,24 @@
         text-transform: uppercase;
         padding: 16px 25px;
         display: inline-block;
+        &:hover{
+            color: #fff;
+            background-color: #383e42;
+        }
+    }
+    &__icon{
+        display: inline-block;
     }
 }
 .is-active .menu__text{
     color: #fff;
-    padding: 16px 40px 16px 47px;
+    padding: 17px 40px 16px 40px;
 }
 .is-active{
     background-color: #383e42;
 }
 .background-jobs{
-    display: inline-block;
-    &__link{
-        text-decoration: none;
-    }
-    &__icon{
-        display: inline-block;
-    }
+    float: right;
     &__counter{
         width: 16px;
         height: 13px;
@@ -48,5 +51,7 @@
         font-family: $font-roboto;
         padding: 1px 6px;
         border-radius: 8px;
+        margin-left: 15px;
+        vertical-align: text-top;
     }
 }
