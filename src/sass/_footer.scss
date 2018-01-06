@@ -1,0 +1,51 @@
+.footer{
+    @include clearfix;
+    padding: 15px 18px 15px 25px;
+    border-top: 1px solid $border-color;
+    @include r($screen-md){
+        text-align: center;
+    }
+    &__nav{
+        display: inline-block;
+        &_col{
+            display: inline-block;
+            margin-right: 55px;
+            @include r($screen-md){
+                margin-right: 44px;
+            }
+            @include r($screen-sm){
+                margin-right: 0;
+                display: block;
+                margin-bottom: 15px;
+            }
+        }
+        a{
+            text-decoration: none;
+            opacity: .5;
+            color: #2d3235;
+            font-family: $font-roboto;
+            font-size: 11px;
+        }
+    }
+    &__copyright{
+        float: right;
+        @include r($screen-md){
+            float: none;
+            margin-top: 15px;
+        }
+    }
+}
+.copyright__text{
+    opacity: .3;
+    color: #2d3235;
+    font-family: "Myriad Pro";
+    font-size: 11px;
+    display: block;
+    &_right{
+        text-align: end;
+        margin-top: 5px;
+        @include r($screen-md){
+            text-align: center;
+        }
+    }
+}
