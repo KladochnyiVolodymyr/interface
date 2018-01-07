@@ -145,11 +145,6 @@
     width: 30px;
     height: 30px;
     border-radius: 15px;
-    position: absolute;
-    top: 95px;
-    &_prev{
-        left: 315px;
-    }
 }
 .arrow__icon{
     width: 14px;
@@ -179,4 +174,9 @@
 .lSAction>a{
     background: none;
     opacity: 1;
+    top: 85%;
+}
+.lSAction>.lSPrev{
+    right: 50px;
+    left: auto;
 }
