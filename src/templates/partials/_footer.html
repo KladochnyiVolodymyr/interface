@@ -1,29 +1,13 @@
+{% import "../data/data.html" as list %}
 <div class="footer">
     <div class="footer__nav">
-        <ul class="footer__nav_col">
-            <li>
-                <a href="#">Users and Groups</a>
-            </li>
-            <li>
-                <a href="#">Help</a>
-            </li>
-        </ul>
-        <ul class="footer__nav_col">
-            <li>
-                <a href="#">About DocuShare</a>
-            </li>
-            <li>
-                <a href="#">Statistics</a>
-            </li>
-        </ul>
-        <ul class="footer__nav_col">
-            <li>
-                <a href="#">Mobile Client Settings</a>
-            </li>
-            <li>
-                <a href="#">Cookies</a>
-            </li>
-        </ul>
+        {% for col in list.footer__nav %}
+            <ul class="footer__nav_col">
+                {% for link in col %}
+                    <li><a href="{{link.href}}">{{link.title}}</a></li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
     </div>
     <div class="footer__copyright">
         <div class="copyright">

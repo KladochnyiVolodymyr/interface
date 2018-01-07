@@ -1,6 +1,9 @@
 .main{
     display: flex;
     width: 100%;
+    @include r(900){
+        display: block;
+    }
     &__col{
         flex: 1;
         min-width: 0;
@@ -8,6 +11,11 @@
     &__col_center{
         border-right: 1px solid $border-color;
         border-left: 1px solid $border-color;
+        @include r(900){
+           border-right: none;
+           border-left: none;
+           border-top: 1px solid $border-color;
+        }
     }
 }
 .block{
@@ -82,21 +90,12 @@
         width: 80%;
     }
 }
-.info-box{
-    display: inline-block;
-    border:1px solid $border-color;
-    padding: 18px;
-    margin-right: 20px;
-    &__title{
-        color: #373d41;
-        font-family: $font-roboto;
-        font-size: 17px;
-        margin-bottom: 38px;
-    }
-}
 .getting-started{
     background-color: #60686f;
     padding: 25px;
+    @include r($screen-xl){
+        text-align: center;
+    }
     &__icon{
         display: inline-block;
         margin-right: 15px;
@@ -105,10 +104,19 @@
             height: 32px;
             fill: #fff;
         }
+        @include r($screen-xl){
+            display: block;
+            margin-right: 0;
+        }
     }
     &__text{
         display: inline-block;
         margin-right: 28px;
+        @include r($screen-xl){
+            display: block;
+            margin-right: 0;
+            margin: 10px 0px;
+        }
     }
     &__btn{
         display: inline-block;
@@ -118,10 +126,6 @@
 }
 .text_white{
     color: #fff;
-}
-.twitter{
-    background: #edeff1;
-    padding: 0px 17px 0px 25px;
 }
 .author{
     display: inline-block;
@@ -141,7 +145,8 @@
     }
 }
 .slide{
-    padding: 20px 0px;
+    background: #edeff1;
+    padding: 20px 17px 20px 25px;
     &__header{
         @include clearfix;
     }
@@ -208,4 +213,28 @@
 .lSAction>.lSPrev{
     right: 50px;
     left: auto
+}
+.info-box{
+    display: inline-block;
+    border:1px solid $border-color;
+    padding: 18px;
+    margin-right: 20px;
+    @include r(940){
+        margin-right: 10px;
+    }
+    @include r(899){
+        margin-right: 20px;
+    }
+    &__title{
+        color: #373d41;
+        font-family: $font-roboto;
+        font-size: 17px;
+        margin-bottom: 38px;
+    }
+}
+.twitter__slider{
+    visibility: hidden;
+}
+.twitter__slider.lightSlider{
+    visibility: visible;
 }
