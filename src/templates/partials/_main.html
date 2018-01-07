@@ -1,8 +1,8 @@
 {% import "../data/data.html" as list %}
 <div class="main">
     <div class="main__col">
-        <div class="info">
-            <div class="info__title">
+        <div class="block">
+            <div class="block__header">
                 <div class="title">
                     <h2 class="title__text">Collections</h2>
                     <div class="title__description">Top level collections</div>
@@ -11,26 +11,26 @@
                     </div>
                 </div>
             </div>
-            <div class="content">
-                <ul class="content__list">
+            <div class="block__content">
+                <ul class="content">
                     {% for item in list.content_col1 %}
                         <li class="content__item">
-                            <a class="content__link" href="#">
-                                <h3 class="content__title">{{item.link}}</h3>
-                                <span class="content__text">{{item.text}}</span>
+                            <a class="link" href="#">
+                                <h3 class="link__title">{{item.link}}</h3>
+                                <span class="link__description">{{item.text}}</span>
                             </a>
                         </li>
                     {% endfor %}
                 </ul>
             </div>
-            <div class="info__btn">
+            <div class="block__footer">
                 <a class="rounded-button" href="#">See More</a>
             </div>
         </div>
     </div>
     <div class="main__col main__col_center">
-        <div class="info">
-            <div class="info__title">
+        <div class="block">
+            <div class="block__header">
                 <div class="title">
                     <h2 class="title__text">Other links</h2>
                     <div class="title__description">Links to other content</div>
@@ -39,19 +39,19 @@
                     </div>
                 </div>
             </div>
-            <div class="content">
-                <ul class="content__list">
+            <div class="block__content">
+                <ul class="content">
                     {% for item in list.content_col2 %}
                         <li class="content__item">
-                            <a class="content__link" href="#">
-                                <h3 class="content__title">{{item.link}}</h3>
-                                <span class="content__text">{{item.text}}</span>
+                            <a class="link" href="#">
+                                <h3 class="link__title">{{item.link}}</h3>
+                                <span class="link__description">{{item.text}}</span>
                             </a>
                         </li>
                     {% endfor %}
                 </ul>
             </div>
-            <div class="info__btn">
+            <div class="block__footer">
                 <a class="rounded-button" href="#">See More</a>
             </div>
         </div>
@@ -119,14 +119,42 @@
                 </li>
             </ul>
         </div>
-    </div>
-</div>
-
-
-<div class="block">
-    <div class="block__header">
-        <div class="title">
-            <h3 class="title__icon"></h3>
+        <div class="block">
+            <div class="block__header">
+                <div class="title">
+                    <h2 class="title__text">Communities</h2>
+                    <div class="title__description">Explore our community areas</div>
+                    <div class="title__icon">
+                        {{mixins.icon('share')}}
+                    </div>
+                </div>
+            </div>
+            <div class="block__content">
+                <div class="content__title">
+                    {{mixins.icon('window')}}
+                    <h3>Workspace</h3>
+                </div>
+                <ul class="content">
+                    <li class="content__item">
+                        <a class="link" href="#">
+                            <h3 class="link__title">Duracell Inc</h3>
+                            <span class="link__description">PM, Eng & SQA document share and test file locations for Cogniance engagement</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="block__footer">
+                <div class="info-box">
+                    <h3 class="info-box__title">Wiki</h3>
+                    <a class="rounded-button" href="#">See More</a>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-box__title">Weblogs</h3>
+                    <a class="rounded-button" href="#">See More</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+
