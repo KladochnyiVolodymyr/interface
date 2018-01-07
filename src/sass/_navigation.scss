@@ -21,6 +21,9 @@
         border-bottom: 1px solid $border-color;
         top: 70px;
     }
+    @include r(600){
+        top: 105px;
+    }
     @include clearfix;
     &__item{
         display: inline-block;

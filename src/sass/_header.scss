@@ -11,6 +11,9 @@
         @include r($screen-md){
             margin-bottom: 15px;
         }
+        @include r(600){
+            margin-top: 45px;
+        }
     }
     &__search{
         @include r($screen-md){

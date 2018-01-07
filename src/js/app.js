@@ -10,6 +10,9 @@ import 'lightslider';
 $('.twitter__slider').lightSlider({
   item: 1,
   pager: false,
+  loop: true,
   prevHtml:'<div class="slider__arrow"><img class="arrow__icon" src="././icons/prev.svg"></div>',
   nextHtml:'<div class="slider__arrow"><img class="arrow__icon" src="././icons/next.svg"></div>'
 });
+
+
