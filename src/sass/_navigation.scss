@@ -19,6 +19,7 @@
         z-index: 1;
         background: #fff;
         border-bottom: 1px solid $border-color;
+        top: 70px;
     }
     @include clearfix;
     &__item{
@@ -93,8 +94,8 @@
 	@include r($screen-md){
 		display: inline-block;
 	  	position: absolute;
-	  	top: 24px;
-	  	right: 35px;
+	  	top: 20px;
+	  	left: 35px;
 	}
 	@include transform (rotate(0deg));
 	@include transition (.5s ease-in-out);
