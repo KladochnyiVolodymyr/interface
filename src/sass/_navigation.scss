@@ -2,7 +2,9 @@
 .navigation{
     border: 1px solid $border-color;
     @include r($screen-md){
-       border: none;
+       border-right: none;
+       border-left: none;
+       border-top: none;
     }
     &__menu{
         display: inline-block;
