@@ -1,6 +1,9 @@
 @import "./_mixin.scss";
 .navigation{
     border: 1px solid $border-color;
+    @include r($screen-md){
+       border: none;
+    }
     &__menu{
         display: inline-block;
     }
